@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You’ve Been Hacked!</title>
+    <style>
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 50px;
+        }
+
+        .loading {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% { content: 'Loading.'; }
+            33% { content: 'Loading..'; }
+            66% { content: 'Loading...'; }
+            100% { content: 'Loading....'; }
+        }
+
+        .message-box {
+            margin-top: 40px;
+            padding: 20px;
+            border: 2px solid #00ff00;
+            background-color: #000;
+        }
+
+        .message-box p {
+            margin: 10px 0;
+            animation: blink 1s steps(2, start) infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .scary-text {
+            margin-top: 50px;
+            font-size: 2rem;
+            animation: flicker 2s linear infinite;
+        }
+
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+            }
+            20%, 24%, 55% {
+                opacity: 0;
+            }
+        }
+
+        .system-popups {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            text-align: left;
+            font-size: 1rem;
+            background: #333;
+            padding: 10px;
+            border: 1px solid #00ff00;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Oops! You've Been Hacked!</h1>
+    <div class="loading">Loading...</div>
+
+    <div class="message-box">
+        <p>Copying files...</p>
+        <p>Accessing personal data...</p>
+        <p>Sending data to remote server...</p>
+    </div>
+
+    <div class="scary-text">WARNING: Data Compromised!</div>
+
+    <div class="system-popups">
+        <p>System Error: Files are being corrupted.</p>
+        <p>Warning: Unauthorized access detected.</p>
+        <p>Critical Error: System shutdown in progress...</p>
+    </div>
+    
+    <script>
+        // Add dynamic pop-up effects
+        setTimeout(() => {
+            alert("Warning: Your device is now compromised!");
+        }, 5000);
+
+        setTimeout(() => {
+            alert("Just kidding! This is a security awareness exercise. Always stay cautious when scanning QR codes.");
+        }, 8000);
+    </script>
+</body>
+</html>
